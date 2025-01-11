@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Linux Command API - Commands</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Linux Command API - Commands</h1>
+        <p>Here are the details of available Linux commands in the API:</p>
+    </header>
+
+    <section>
+        <h2>Available Commands</h2>
+        <h3>GET /commands</h3>
+        <p>This endpoint retrieves a list of all available Linux commands.</p>
+
+        <h4>Response Example:</h4>
+        <pre><code>[
+    { "name": "ls", "description": "List directory contents", "example": "ls -l" },
+    { "name": "tail", "description": "Show the last lines of a file", "example": "tail -n 10 file.txt" }
+]</code></pre>
+
+        <h3>GET /commands/:name</h3>
+        <p>This endpoint retrieves details about a specific command.</p>
+
+        <h4>Example Request:</h4>
+        <pre><code>GET /commands/ls</code></pre>
+
+        <h4>Example Response:</h4>
+        <pre><code>{
+    "name": "ls",
+    "description": "List directory contents",
+    "example": "ls -l"
+}</code></pre>
+
+        <h3>POST /commands</h3>
+        <p>This endpoint adds a new Linux command to the API.</p>
+
+        <h4>Example Request:</h4>
+        <pre><code>{
+    "name": "grep",
+    "description": "Search text using patterns",
+    "example": "grep -r 'pattern' folder/"
+}</code></pre>
+
+        <h4>Example Response:</h4>
+        <pre><code>{
+    "message": "Command added successfully"
+}</code></pre>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Linux Command API. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
