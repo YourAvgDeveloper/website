@@ -1,1 +1,47 @@
-<h1>Hello world</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Linux Command API Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Linux Command API Documentation</h1>
+        <p>Welcome to the documentation for the Linux Command API. This API provides access to various Linux commands that you can interact with.</p>
+    </header>
+
+    <section>
+        <h2>Available Endpoints</h2>
+        <ul>
+            <li><strong>GET /commands</strong> - Retrieve a list of available Linux commands.</li>
+            <li><strong>GET /commands/:name</strong> - Get details about a specific Linux command.</li>
+            <li><strong>POST /commands</strong> - Add a new Linux command to the API.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Authentication</h2>
+        <p>The API requires an API token for access. Use the <code>Authorization</code> header with the following format:</p>
+        <pre><code>Authorization: Bearer your-api-token</code></pre>
+        <p>You can obtain the token by logging in via the <code>/login</code> endpoint.</p>
+    </section>
+
+    <section>
+        <h2>Getting Started</h2>
+        <ol>
+            <li>Clone the API repository: <code>git clone https://github.com/your-username/linux-command-api.git</code></li>
+            <li>Install dependencies: <code>npm install</code></li>
+            <li>Start the server: <code>node index.js</code></li>
+        </ol>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Linux Command API. All Rights Reserved.</p>
+    </footer>
+    
+</body>
+</html>
